@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@theme {
+  /* Your Cosmic Space Palette */
+  --color-space-bg: #030712;
+  --color-space-card: #0b1528;
+  --color-star-white: #f8fafc;
+  --color-star-gold: #fbbf24;
+
+  /* The Pure CSS Animations */
+  --animate-hero-enter: hero-enter 2.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  --animate-fade-in-up: fade-in-up 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+
+  @keyframes hero-enter {
+    0% { opacity: 0; transform: translateY(3rem) scale(1.05); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(2rem); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+body {
+  background-color: var(--color-space-bg);
+  color: var(--color-star-white);
+  overflow-x: hidden;
+}
